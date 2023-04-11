@@ -36,7 +36,6 @@ public class OMDbMoviesService : IOMDbMoviesService
 
         RestResponse response = await client.GetAsync(request);
         ResponseDTO requestResponse = JsonSerializer.Deserialize<ResponseDTO>(response.Content);
-        Console.WriteLine(response.Content);
 
         return requestResponse;
          
